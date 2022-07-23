@@ -11,10 +11,16 @@ import {
     Heading,
     Text,
     useColorModeValue,
+    HStack,
+    Divider,
 } from '@chakra-ui/react';
+import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 
 export default function Login() {
+
+    const [OTP, setOTP] = useState(false);
+
     return (
         <Flex
             minH={'100vh'}
@@ -38,18 +44,11 @@ export default function Login() {
                             <FormLabel>Email or mobile number</FormLabel>
                             <Input type="email" />
                         </FormControl>
-                        <FormControl id="password">
-                            <FormLabel>Password</FormLabel>
+                        <FormControl id="password" display={OTP ? 'block' : 'none'}>
+                            <FormLabel>Enter OTP</FormLabel>
                             <Input type="password" />
                         </FormControl>
                         <Stack spacing={10}>
-                            <Stack
-                                direction={{ base: 'column', sm: 'row' }}
-                                align={'start'}
-                                justify={'space-between'}>
-                                <Checkbox>Remember me</Checkbox>
-                                <Link color={'blue.400'}>Forgot password?</Link>
-                            </Stack>
                             <Button
                                 bg={'blue.400'}
                                 color={'white'}
@@ -59,10 +58,15 @@ export default function Login() {
                                 Sign in
                             </Button>
                         </Stack>
+                        <HStack justifyContent='space-between' py='4'>
+                            <Divider />
+                            <Text w='xs' textAlign='center'>or login with</Text>
+                            <Divider />
+                        </HStack>
                         <Button variant='ghost' justifyContent='center' alignItems='center' border='1px' borderColor='gray.600' rounded='md'>
                             <FcGoogle fontSize='24px' />
                             <Text ml='4' fontSize='md' fontWeight='medium'>Sign Up with Google</Text>
-                        </Button>   
+                        </Button>
                     </Stack>
                 </Box>
             </Stack>
