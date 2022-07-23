@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "set": "git pull origin main && npm i"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.4",
