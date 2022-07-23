@@ -6,6 +6,9 @@ const config = {
 };
 
 const theme = extendTheme({
+  fonts: {
+    heading: `'inter', sans-serif`,
+  },
   styles: {
     global: {
       "html, body": {
