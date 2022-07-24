@@ -7,9 +7,9 @@ import Hero from "./Hero"
 const Home: NextPage = () => {
   
   return (
-    // <Login/>
+    <Login/>
     // <Signup/>
-    <Hero />
+    // <Hero />
   )
 }
 
