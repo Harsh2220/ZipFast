@@ -1,12 +1,6 @@
-import React from 'react'
 import {
   Box,
-  Center,
-  useColorModeValue,
-  Heading,
-  Text,
-  Stack,
-  Image,
+  Center, Text
 } from "@chakra-ui/react";
 
 export default function FoodCard() {
@@ -27,8 +21,7 @@ export default function FoodCard() {
         
       >
         <Box h={'10'} w={'full'} mt="auto" background='linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05))' position="absolute" bottom="0">
-          <Text>Resturant</Text>
-
+          <Text>Resturant</Text>F
         </Box>
       </Box>
     </Center>
