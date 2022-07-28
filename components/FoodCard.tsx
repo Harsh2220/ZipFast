@@ -25,7 +25,7 @@ export default function FoodCard() {
         boxShadow={'dark-lg'}
       >
         <Box h={'10'} w={'full'} mt="auto" background='linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.01))' position="absolute" bottom="0" rounded='lg' px='2'>
-          <Text fontSize='lg'>Resturant</Text>
+          <Text fontSize='lg' fontWeight='medium'>Resturant Name</Text>
         </Box>
       </Box>
     </Center>
