@@ -15,7 +15,6 @@ import {
     Divider,
     useToast,
 } from '@chakra-ui/react';
-import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { createClient } from '@supabase/supabase-js'
 import { useRouter } from 'next/router';
@@ -42,7 +41,7 @@ export default function Login() {
             console.log(error);
             return
         }else{
-            setotpsent(true);
+            setotpsent;
         }
     }
 

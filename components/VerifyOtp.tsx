@@ -19,9 +19,9 @@ import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { createClient } from '@supabase/supabase-js'
 import { useRouter } from 'next/router';
-import useStore from '../store/Store';
+import useStore from 'zustand';
 
-export default function Login() {
+export default function VerifyOtp() {
 
     const projectUrl = process.env.NEXT_PUBLIC_PROJECT_URL
     const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY
@@ -31,18 +31,28 @@ export default function Login() {
     const toast = useToast();
     const state = useStore();
     const mobile = state.mobile;
-    const setMobile = state.setmobile;
-    const setotpsent = state.setotpsent;
+    const otp = state.otp;
+    const setotp = state.setotp;
 
-    const sendOTP = async () => {
-        let { user, error } = await supabase.auth.signIn({
-            phone: mobile
+    const verifyOTP = async () => {
+        let { session, error } = await supabase.auth.verifyOTP({
+            phone: mobile,
+            token: otp
         })
         if (error) {
-            console.log(error);
-            return
-        }else{
-            setotpsent(true);
+            toast({
+                title: 'Some Error Occured!',
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+            })
+        } else {
+            toast({
+                title: 'Success !!!',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+            })
         }
     }
 
@@ -65,20 +75,10 @@ export default function Login() {
                     boxShadow={'lg'}
                     p={8}>
                     <Stack spacing={4}>
-                        <FormControl id="email">
-                            <FormLabel>Email or mobile number</FormLabel>
-                            <Input type="email" onChange={(e) => { setMobile(e.target.value) }} />
+                        <FormControl id="password">
+                            <FormLabel>Enter OTP</FormLabel>
+                            <Input type="password" onChange={(e) => { setotp(e.target.value) }} />
                         </FormControl>
-                        <Stack spacing={10}>
-                            <Button
-                                bg={'blue.400'}
-                                color={'white'}
-                                _hover={{
-                                    bg: 'blue.500',
-                                }} onClick={sendOTP}>
-                                Sign in
-                            </Button>
-                        </Stack>
                         <HStack justifyContent='space-between' py='4'>
                             <Divider />
                             <Text w='xs' textAlign='center'>or login with</Text>

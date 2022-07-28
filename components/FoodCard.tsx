@@ -14,8 +14,7 @@ export default function FoodCard() {
     <Center>
       <Box
         backgroundImage="url('https://i.pinimg.com/originals/a2/bb/d5/a2bbd55e26b31e5157b770d5e5292c0d.jpg')"
-        roundedTop="10px"
-        rounded="10px"
+        rounded='lg' 
         backgroundPosition="center"
         backgroundRepeat={"no-repeat"}
         backgroundSize="cover"
@@ -24,11 +23,9 @@ export default function FoodCard() {
         h="300px"
         position={'relative'}
         boxShadow={'dark-lg'}
-        
       >
-        <Box h={'10'} w={'full'} mt="auto" background='linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05))' position="absolute" bottom="0">
-          <Text>Resturant</Text>
-
+        <Box h={'10'} w={'full'} mt="auto" background='linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.01))' position="absolute" bottom="0" rounded='lg' px='2'>
+          <Text fontSize='lg'>Resturant</Text>
         </Box>
       </Box>
     </Center>

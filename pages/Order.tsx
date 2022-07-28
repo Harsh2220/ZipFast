@@ -14,7 +14,7 @@ import FoodCard from "../components/FoodCard";
 
 export default function Order() {
   return (
-    <Stack backgroundColor={"facebook.50"} minH='100vh'>
+    <Stack minH='100vh'>
       <Grid templateColumns="repeat(5, 1fr)">
         <FoodCard />
         <FoodCard />
