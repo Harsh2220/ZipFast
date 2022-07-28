@@ -1,7 +1,6 @@
 import {
   Heading, Stack, Flex, Box
 } from '@chakra-ui/react';
-
 import '@fontsource/inter/700.css';
 import Navbar from '../components/Navbar';
 
