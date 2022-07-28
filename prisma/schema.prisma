@@ -1,11 +1,30 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model Owners {
+  id         BigInt      @id @unique @default(autoincrement())
+  created_at DateTime?   @unique @default(now()) @db.Timestamptz(6)
+  Address    String?     @db.VarChar
+  RestImage  String?     @db.VarChar
+  OwnerName  String?     @db.VarChar
+  RestName   String?     @db.VarChar
+  Products_  Products_[]
+}
+
+model Products_ {
+  id         BigInt    @id @unique @default(autoincrement())
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  fk_Owner   BigInt?
+  PrdName    String?   @db.VarChar
+  PrdImage   String?   @db.VarChar
+  PrdPrice   Int?
+  Owners     Owners?   @relation(fields: [fk_Owner], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("Products ")
 }

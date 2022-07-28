@@ -1,6 +1,7 @@
 import { Center, Heading } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Dashboard from '../components/admin/Dashboard'
+import FoodCard from '../components/FoodCard'
 import Login from '../components/Login'
 import VerifyOtp from '../components/VerifyOtp'
 import useStore from '../store/Store'
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
   
   return (
     // (otpsent ? <VerifyOtp/> : <Login/> )
-    <Dashboard/>
+    <FoodCard/>
   )
 }
 
