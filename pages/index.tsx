@@ -8,6 +8,7 @@ import VerifyOtp from '../components/VerifyOtp'
 import useStore from '../store/Store'
 import Hero from "./Hero"
 // import order from './order'
+import order from './Order'
 
 const Home: NextPage = () => {
 
@@ -16,8 +17,9 @@ const Home: NextPage = () => {
   
   return (
     // (otpsent ? <VerifyOtp/> : <Login/> )
-    <Sidebar/>
+    // <Sidebar/>
     // <Hero/>
+    <FoodCard/>
   )
 }
 
