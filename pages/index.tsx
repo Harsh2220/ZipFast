@@ -6,7 +6,7 @@ import Login from '../components/Login'
 import VerifyOtp from '../components/VerifyOtp'
 import useStore from '../store/Store'
 import Hero from "./Hero"
-import order from './order'
+import order from './Order'
 
 const Home: NextPage = () => {
 
