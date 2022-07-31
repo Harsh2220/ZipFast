@@ -42,16 +42,16 @@ const LinkItems: Array<LinkItemProps> = [
 
 export default function Sidebar(){
     return (
-        <Box p={4} maxWidth={60} minHeight={'100vh'} bgColor={'blackAlpha.500'}>
+        <Box p={'9'} maxWidth={'sm'} minHeight={'100vh'} bgColor={'blackAlpha.500'}>
            <Stack justifyContent={'center'} textAlign={'center'}>
-                <Box borderRadius={30} mt={8} overflow={'hidden'}>
+                <Box mt={8} overflow={'hidden'}>
                     <Image src={bucks} height={'200vh'} />
                 </Box>
                 <Stack>
-                    <Text fontSize={'lg'} color='gray.200' mt={4}>Starbucks Coffee</Text>
+                    <Text fontSize={'xx-large'} fontWeight={'bold'} color='gray.200' mt={4}>Starbucks Coffee</Text>
                 </Stack>
                 <Stack>
-                    <Text fontSize={'md'} color='gray.400' mt={8}>Tata Starbucks Private Limited</Text>
+                    <Text fontSize={'lg'} fontWeight={'semibold'} color='gray.400' mt={8}>Tata Starbucks Private Limited</Text>
                 </Stack>
                 <Stack>
                     <Text color='gray.500' mt={8}>Ground Floor, First Floor, Rajyash Uniza, A/S Devashish Business Park, Bodakdev, Ahmedabad India</Text>

@@ -9,6 +9,8 @@ import useStore from '../store/Store'
 import Hero from "./Hero"
 // import order from './order'
 import order from './Order'
+import Navbar from '../components/Navbar'
+
 
 const Home: NextPage = () => {
 
@@ -19,7 +21,9 @@ const Home: NextPage = () => {
     // (otpsent ? <VerifyOtp/> : <Login/> )
     // <Sidebar/>
     // <Hero/>
-    <FoodCard/>
+    // <Navbar/>
+    // <FoodCard/>
+    <Dashboard/>
   )
 }
 
