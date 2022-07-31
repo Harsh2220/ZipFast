@@ -10,7 +10,7 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import { relative } from "path";
-import FoodCard from "../components/FoodCard";
+import FoodCard from "../components/RestCard";
 
 export default function Order() {
   return (
