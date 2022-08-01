@@ -1,44 +1,53 @@
-import React, { ReactNode } from 'react';
-import {
-  Box,
-  Img,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import React, { ReactNode } from "react";
+import { Box, Img, Stack, Text } from "@chakra-ui/react";
 import {
   FiHome,
   FiTrendingUp,
   FiCompass,
   FiStar,
   FiSettings,
-} from 'react-icons/fi';
-import { IconType } from 'react-icons';
+} from "react-icons/fi";
+import { IconType } from "react-icons";
+import Link from "next/link";
 
 interface LinkItemProps {
   name: string;
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome },
-  { name: 'Trending', icon: FiTrendingUp },
-  { name: 'Explore', icon: FiCompass },
-  { name: 'Favourites', icon: FiStar },
-  { name: 'Settings', icon: FiSettings },
+  { name: "Home", icon: FiHome },
+  { name: "Trending", icon: FiTrendingUp },
+  { name: "Explore", icon: FiCompass },
+  { name: "Favourites", icon: FiStar },
+  { name: "Settings", icon: FiSettings },
 ];
 
 export default function Sidebar() {
   return (
-    <Box minHeight={'100vh'} bgColor={'blackAlpha.500'} pos='sticky' top='0'>
-      <Box overflow={'hidden'}>
-        <Img src={"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} h='200' w='full' />
+    <Box minHeight={"100vh"} bgColor={"blackAlpha.500"} pos="sticky" top="0">
+      <Box overflow={"hidden"}>
+        <Img
+          src={
+            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          }
+          h="200"
+          w="full"
+        />
       </Box>
-      <Stack justifyContent={'center'} textAlign={'center'} p='2'>
-          <Text fontSize={'xx-large'} fontWeight={'bold'} color='gray.200'>Starbucks Coffee</Text>
-          <Text fontSize={'lg'} fontWeight={'semibold'} color='gray.400'>Tata Starbucks Private Limited</Text>
-          <Text color='gray.500'>Ground Floor, First Floor, Rajyash Uniza, A/S Devashish Business Park, Bodakdev,India</Text>
+      <Stack justifyContent={"center"} textAlign={"center"} p="2">
+        <Text fontSize={"xx-large"} fontWeight={"bold"} color="gray.200">
+          Starbucks Coffee
+        </Text>
+        <Text fontSize={"lg"} fontWeight={"semibold"} color="gray.400">
+          Tata Starbucks Private Limited
+        </Text>
+        <Text color="gray.500">
+          Ground Floor, First Floor, Rajyash Uniza, A/S Devashish Business Park,
+          Bodakdev,India
+        </Text>
       </Stack>
     </Box>
-  )
+  );
 }
 // export default function SimpleSidebar({ children }: { children: ReactNode }) {
 //   const { isOpen, onOpen, onClose } = useDisclosure();
