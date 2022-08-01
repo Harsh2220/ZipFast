@@ -36,7 +36,6 @@ export default function Dashboard() {
       </Box>
       <Stack w="full">
         <HStack justifyContent="end" pos="sticky" top="0" px="4">
-          <AllOrders />
           <AddItem />
         </HStack>
         <Flex
@@ -71,16 +70,6 @@ export default function Dashboard() {
           
         </Flex> */}
       </Stack>
-    </Flex>
-  );
-}
-
-function AllOrders() {
-  return (
-    <Flex justifyContent="end" m="4">
-      <Button rounded={"md"} w="36" leftIcon={<AddIcon />}>
-        All Orders
-      </Button>
     </Flex>
   );
 }

@@ -1,11 +1,10 @@
 import {
-  Box,
-  Button,
   Checkbox,
+  Divider,
   Flex,
   Heading,
-  Img,
-  Stack,
+  HStack,
+  Switch,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -14,43 +13,45 @@ import React from "react";
 function AllOrdersCard() {
   return (
     <Flex
-      flexDirection="row"
+      flexDirection="column"
       justifyContent="space-between"
       borderColor="blue.300"
       bg="whiteAlpha.100"
-      minW="max-content"
+      w='64'
       rounded="md"
-      h="auto"
-      py="5"
+      py="6"
       px="4"
-      m="6"
+      m="5"
     >
       <VStack
         alignItems="flex-start"
         justifyContent="space-between"
         flex="auto"
       >
-        <Text fontSize="xl" color="white" fontWeight="semibold">
-          User ID:ZFT0000015
+        <Heading fontSize="lg" fontWeight="semibold">
+          #ZFT0000015
+        </Heading>
+        <Text fontSize="lg" fontWeight="semibold">
+          John Doe
         </Text>
-        <Text fontSize="xl" color="white" fontWeight="semibold">
-          Dish Name:Paneer Masala
-        </Text>
-        <Text fontSize="2xl" color="white" fontWeight="semibold">
-          Time : 8:47 PM
+        <Text fontSize="lg" fontWeight="semibold">
+          8:00AM - 9:00AM
         </Text>
       </VStack>
-      <VStack alignItems="flex-start" justifyContent="flex-start" mx="8">
-        <Checkbox>
-          <Text fontSize="xl" color="white" fontWeight="light">
+      <Divider my='2'/>
+      <VStack alignItems="flex-start" justifyContent="flex-start">
+        <Flex alignItems='center' justifyContent='space-between' w='full'>
+          <Text fontSize="lg">
             Sent For Cooking
           </Text>
-        </Checkbox>
-        <Checkbox>
-          <Text fontSize="xl" color="white" fontWeight="light">
+          <Switch size='md'/>
+        </Flex>
+        <Flex alignItems='center' justifyContent='space-between' w='full'>
+          <Text fontSize="lg">
             Order Fullfilled
           </Text>
-        </Checkbox>
+          <Switch size='md'/>
+        </Flex>
       </VStack>
     </Flex>
   );
